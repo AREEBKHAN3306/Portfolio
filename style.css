@@ -1,0 +1,284 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000; 
+    line-height: 1.6;
+}
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation*/
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+    background-color: #333;
+}
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2em; 
+}
+
+/* Header*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #e74c3c; 
+    position: absolute;
+    top: 0;
+    left: 20px; 
+}
+
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    flex-wrap: wrap;
+}
+.hero-text {
+    flex: 1;
+}
+.hero-text h1 {
+    font-size: 2.5em;
+    color: #fff;
+}
+.highlight {
+    color: #e74c3c; 
+}
+.hero-text p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #ccc;
+}
+.hero-buttons {
+    margin-top: 30px;
+}
+.btn, .btn-outline {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e74c3c;
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+}
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* About*/
+.about {
+    padding: 50px 0;
+    text-align: center;
+}
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.about p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+}
+
+/* Portfolio*/
+.portfolio {
+    padding: 50px 0;
+}
+.portfolio h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.project {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.project h3 {
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+/* Contact*/
+.contact {
+    padding: 50px 0;
+    background-color: #111;
+    text-align: center;
+}
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form label, form input, form textarea {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+form input, form textarea {
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+form button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Social Links*/
+.social-links {
+    margin-top: 20px;
+}
+.social-links a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+/* Copyright*/
+.copyright {
+    margin-top: 30px;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+
+
+/* Media Queries */
+
+/* Desktop*/
+@media (min-width: 801px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .navbar ul li a {
+        font-size: 1.5em; 
+    }
+
+    .hero-text h1 {
+        font-size: 3em; 
+    }
+    
+    form input, form textarea {
+        max-width: 800px; 
+    }
+}
+
+/* Tablet*/
+@media (max-width: 800px) and (min-width: 601px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar ul li a {
+        font-size: 1.2em; 
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    form input, form textarea {
+        max-width: 600px; 
+    }
+}
+
+/* Mobile*/
+@media (max-width: 600px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+    
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2em; 
+        margin: 10px 0;
+    }
+
+    form input, form textarea {
+        max-width: 100%; 
+    }
+    
+    .hero-image img {
+        max-width: 300px; 
+    }
+}
